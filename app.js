@@ -1,3 +1,4 @@
+
 var pics_src = new Array(
     "img/beegle.jpg",
     "img/shiba.jpg",
@@ -5,12 +6,24 @@ var pics_src = new Array(
     "img/bichonfrize.jpg",
     "img/borderkoli.jpg",
     "img/reon.jpg",
-    "img/borzoi.jpg"
+    "img/borzoi.jpg",
+    "img/american-cocker-spaniel.jpg",
+    "img/syarpay.jpg",
+    "img/boston.jpg",
+    "img/jack.jpg",
+    "img/samoedo.jpg",
+    "img/great.jpg",
+    "img/alaskanmalamute.jpg",
+    "img/sheruthi.jpg",
+    "img/pagu.jpg",
+    "img/bullteria.jpg",
+    "img/chin.jpg"
     );
-            var num = 0;
+    
+var num = 0;   
  
-            function slideshow(){
-                if (num == 6) {
+function slideshow(){
+                if (num == 17) {
                     num = 0;
                 }
                 else {
@@ -18,6 +31,7 @@ var pics_src = new Array(
                 }
                 document.getElementById("mypic").src=pics_src[num];
             }
+            
 
 const quiz = [
     {
@@ -45,6 +59,7 @@ const quiz = [
         'スピッツ',
         ],
     correct: 'スピッツ'
+
     },{
     answers: [
         'ビションフリーゼ',
@@ -77,6 +92,94 @@ const quiz = [
         'ウェルシュコーギー',
         ],
     correct: 'ボルゾイ'
+    },{
+    answers: [
+        'ミニチュアピンシャー',
+        'シュナウザー',
+        'チャウチャウ',
+        'アメリカンコッカースパニエル',
+        ],
+    correct: 'アメリカンコッカースパニエル'
+    },{
+    answers: [
+        'シャーペイ',
+        'ブルドッグ',
+        'ラブラドールレトリバー',
+        'ポメラニアン',
+        ],
+    correct: 'シャーペイ'
+    },{
+    answers: [
+        'フレンチブルドッグ',
+        'ボストンテリア',
+        'ゴールデンレトリバー',
+        'チワックス',
+        ],
+    correct: 'ボストンテリア'
+    },{
+    answers: [
+        'ビーグル',
+        'ジャックラッセルテリア',
+        'トイプードル',
+        'スキッパーキ',
+        ],
+    correct: 'ジャックラッセルテリア'
+    },{
+    answers: [
+        '秋田犬',
+        'ボロニーズ',
+        '白柴',
+        'サモエド',
+        ],
+    correct: 'サモエド'
+    },{
+    answers: [
+        'グレートピレネーズ',
+        'ゴールデンレトリバー',
+        'オーストラリアンシェパード',
+        '紀州犬',
+        ],
+    correct: 'グレートピレネーズ'
+    },{
+    answers: [
+        'シベリアンハスキー',
+        'アラスカンマラミュート',
+        'イングリッシュポインター',
+        '秋田犬',
+        ],
+    correct: 'アラスカンマラミュート'
+    },{
+    answers: [
+        'ラフコリー',
+        'ロットワイラー',
+        'シェルティ',
+        'ボロニーズ',
+        ],
+    correct: 'シェルティ'
+    },{
+    answers: [
+        'チワワ',
+        'トイプードル',
+        'パグ',
+        'ペキニーズ',
+        ],
+    correct: 'パグ'
+    },{
+    answers: [
+        'ピットブルテリア',
+        'ミニチュアブルテリア',
+        'ボクサー',
+        'レークランドテリア',
+        ],
+    correct: 'ミニチュアブルテリア'
+    },{
+    answers: [
+        '甲斐犬',
+        'シュナウザー',
+        '狆',
+        'ニューファンドランド',
+        ],
+    correct: '狆'
     }
     ];
     
@@ -87,6 +190,7 @@ const $button = document.getElementsByTagName('button');
 const buttonLength = $button.length;
 
   const setupQuiz = () => {
+    document.getElementById("mypic").src=pics_src[num];
     let buttonIndex = 0;
 　  while(buttonIndex < buttonLength) {
     $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
